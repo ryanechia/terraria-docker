@@ -13,6 +13,9 @@ autocreate=3
 # world difficulty 0: (normal), 1: (expert), 2: (master), 3: (journey)
 difficulty=3
 
+# add message of the day
+# motd=Please don’t cut the purple trees!
+
 maxplayers=16
 password=p@55w0rd*
 port=7777
