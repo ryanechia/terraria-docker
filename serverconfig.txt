@@ -15,6 +15,7 @@ difficulty=3
 
 maxplayers=16
 password=p@55w0rd*
+port=7777
 
 # journey mode power permissions 0: (Locked for everyone), 1: (Can only be changed by host), 2: (Can be changed by everyone)
 journeypermission_time_setfrozen=2
