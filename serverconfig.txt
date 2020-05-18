@@ -1,0 +1,34 @@
+# world file path
+worldname=/opt/terraria/Worlds/HelloWorld.wld
+
+# world folder path
+world=/opt/terraria/Worlds
+
+# anti-cheat 0: (false), 1: (true)
+secure=1
+
+# World size 1: (small), 2: (medium), and 3: (large).
+autocreate=3
+
+# world difficulty 0: (normal), 1: (expert), 2: (master), 3: (journey)
+difficulty=3
+
+maxplayers=16
+password=p@55w0rd*
+
+# journey mode power permissions 0: (Locked for everyone), 1: (Can only be changed by host), 2: (Can be changed by everyone)
+journeypermission_time_setfrozen=2
+journeypermission_time_setdawn=2
+journeypermission_time_setnoon=2
+journeypermission_time_setdusk=2
+journeypermission_time_setmidnight=2
+journeypermission_godmode=2
+journeypermission_wind_setstrength=2
+journeypermission_rain_setstrength=2
+journeypermission_time_setspeed=2
+journeypermission_rain_setfrozen=2
+journeypermission_wind_setfrozen=2
+journeypermission_increaseplacementrange=2
+journeypermission_setdifficulty=2
+journeypermission_biomespread_setfrozen=2
+journeypermission_setspawnrate=2
