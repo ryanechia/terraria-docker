@@ -19,6 +19,7 @@ RUN unzip terraria-server.zip "${VERSION}/Linux/*" \
 
 # Stage 2
 FROM ubuntu:18.04
+RUN apt-get install screen
 
 WORKDIR /opt/terraria
 
