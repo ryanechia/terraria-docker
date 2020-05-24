@@ -32,8 +32,8 @@ VOLUME ["/world"]
 EXPOSE 7777
 
 ADD serverconfig.txt .
-ADD terrariad /usr/local/bin/terrariad
-RUN chmod +x /usr/local/bin/terrariad
+#ADD terrariad /usr/local/bin/terrariad
+#RUN chmod +x /usr/local/bin/terrariad
 
 #ENTRYPOINT screen -dmS terraria /bin/bash -c "./TerrariaServer -x64 -config serverconfig.txt"
 ENTRYPOINT tmux new -d -s terraria-session './TerrariaServer -x64 -config serverconfig.txt' \; \
