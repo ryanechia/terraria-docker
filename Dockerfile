@@ -19,7 +19,7 @@ RUN unzip terraria-server.zip "${VERSION}/Linux/*" \
 
 # Stage 2
 FROM ubuntu:18.04
-RUN apt-get install screen
+RUN apt-get update && apt-get install screen
 
 WORKDIR /opt/terraria
 
@@ -29,5 +29,7 @@ VOLUME ["/world"]
 EXPOSE 7777
 
 ADD serverconfig.txt .
+ADD terrariad /usr/local/bin/terrariad
+RUN sudo chmod +x /usr/local/bin/terrariad
 
 ENTRYPOINT ./TerrariaServer -x64 -config serverconfig.txt
