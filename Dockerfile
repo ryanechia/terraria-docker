@@ -32,4 +32,4 @@ ADD serverconfig.txt .
 ADD terrariad /usr/local/bin/terrariad
 RUN sudo chmod +x /usr/local/bin/terrariad
 
-ENTRYPOINT ./TerrariaServer -x64 -config serverconfig.txt
+ENTRYPOINT sudo systemctl start terraria
