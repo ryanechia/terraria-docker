@@ -7,11 +7,11 @@ WORKDIR /var
 RUN apt-get update \
     && apt-get install -y unzip wget
 
-ARG VERSION=1402
+ARG VERSION=1404
 # uncomment when latest version reverts back to normal URL format
 #ARG SERVER_ZIP_URL='http://terraria.org/server/terraria-server-${VERSION}.zip'
 #RUN wget -O terraria-server.zip ${SERVER_ZIP_URL}
-RUN wget -O terraria-server.zip https://terraria.org/system/dedicated_servers/archives/000/000/036/original/terraria-server-1402.zip?1589675482
+RUN wget -O terraria-server.zip https://www.terraria.org/system/dedicated_servers/archives/000/000/038/original/terraria-server-1404.zip?1590253816
 
 RUN unzip terraria-server.zip "${VERSION}/Linux/*" \
   && chmod -R a+rw ${VERSION}/Linux/* \
