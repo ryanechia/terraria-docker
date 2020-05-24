@@ -31,6 +31,6 @@ EXPOSE 7777
 
 ADD serverconfig.txt .
 ADD terrariad /usr/local/bin/terrariad
-RUN sudo chmod +x /usr/local/bin/terrariad
+RUN chmod +x /usr/local/bin/terrariad
 
-ENTRYPOINT sudo systemctl start terraria
+ENTRYPOINT systemctl start terraria
