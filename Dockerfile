@@ -10,7 +10,7 @@ RUN apt-get update \
 ARG VERSION=1402
 # uncomment when latest version reverts back to normal URL format
 #ARG SERVER_ZIP_URL='http://terraria.org/server/terraria-server-${VERSION}.zip'
-#ADD ${SERVER_ZIP_URL} terraria-server.zip
+#RUN wget -O terraria-server.zip ${SERVER_ZIP_URL}
 RUN wget -O terraria-server.zip https://terraria.org/system/dedicated_servers/archives/000/000/036/original/terraria-server-1402.zip?1589675482
 
 RUN unzip terraria-server.zip "${VERSION}/Linux/*" \
