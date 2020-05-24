@@ -2,7 +2,7 @@ FROM ubuntu:18.04 AS builder
 
 MAINTAINER Ryane Chia <ryanechia@outlook.com>
 
-WORKDIR /opt
+WORKDIR /var
 
 RUN apt-get update \
     && apt-get install -y unzip wget
@@ -23,9 +23,9 @@ FROM ubuntu:18.04
 RUN apt-get update \
     && apt-get install -y screen
 
-WORKDIR /opt/terraria
+WORKDIR /var/terraria
 
-COPY --from=builder /opt/terraria .
+COPY --from=builder /var/terraria .
 
 VOLUME ["/world"]
 EXPOSE 7777
