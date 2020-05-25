@@ -20,9 +20,9 @@ RUN unzip terraria-server.zip "${VERSION}/Linux/*" \
 
 # Stage 2
 FROM ubuntu:18.04
-RUN apt-get update \
+#RUN apt-get update \
 #    && apt-get install -y screen
-    && apt-get install -y tmux
+#    && apt-get install -y tmux
 
 WORKDIR /var/terraria
 
@@ -32,9 +32,13 @@ VOLUME ["/world"]
 EXPOSE 7777
 
 ADD serverconfig.txt .
+ADD server-start.sh .
+RUN chmod +x server-start.sh
 #ADD terrariad /usr/local/bin/terrariad
 #RUN chmod +x /usr/local/bin/terrariad
 
-#ENTRYPOINT screen -dmS terraria /bin/bash -c "./TerrariaServer -x64 -config serverconfig.txt"
-ENTRYPOINT tmux new -d -s terraria-session './TerrariaServer -x64 -config serverconfig.txt' \; \
-            attach \;
+#ENTRYPOINT screen -dmS terraria /bin/sh -c "./TerrariaServer -x64 -config serverconfig.txt"
+#ENTRYPOINT tmux new -d -s terraria-session './TerrariaServer -x64 -config serverconfig.txt' \; \
+#            attach \;
+ENTRYPOINT ["./server-start.sh"]
+CMD ["run"]
